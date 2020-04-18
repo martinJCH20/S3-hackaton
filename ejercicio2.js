@@ -1,19 +1,17 @@
-let departaments = [
-    'Piura','Loreto','Arequipa','Lima'
+let animals = [
+    'Conejo','Perro','Jirafa','Leon'
 ]
 
-const mapDep = function (array, callback){
+const mapAnimals = function (array, callback){
     let newArray = [];
-    array.filter(function(element){
-        if(element.length <= 6){
-            newArray.push(element);
-        }
+    array.map(function(element, index){
+        newArray.push(`${index+1}) ${element}`);
     })
     return newArray;
 }
 
-const departamentNombres = mapDep(departaments, function(task){
+const animalsNombres = mapAnimals(animals, function(task){
     return task;
 })
 
-console.log(departamentNombres);
+console.log(animalsNombres);
