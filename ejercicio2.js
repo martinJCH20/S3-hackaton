@@ -5,7 +5,7 @@ let animals = [
 const mapAnimals = function (array, callback){
     let newArray = [];
     array.map(function(element, index){
-        newArray.push(`${index+1}) ${element}`);
+        newArray.push(callback(`${index+1}) ${element}`));
     })
     return newArray;
 }

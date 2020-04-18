@@ -6,7 +6,7 @@ const mapDep = function (array, callback){
     let newArray = [];
     array.filter(function(element){
         if(element.length <= 6){
-            newArray.push(element);
+            newArray.push(callback(element));
         }
     })
     return newArray;
