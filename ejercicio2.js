@@ -2,7 +2,18 @@ let departaments = [
     'Piura','Loreto','Arequipa','Lima'
 ]
 
-const mapDep = departaments.map((dep, index) => {
-    return `${index+1}) ${dep}`;
+const mapDep = function (array, callback){
+    let newArray = [];
+    array.filter(function(element){
+        if(element.length <= 6){
+            newArray.push(element);
+        }
+    })
+    return newArray;
+}
+
+const departamentNombres = mapDep(departaments, function(task){
+    return task;
 })
-console.log(mapDep);
+
+console.log(departamentNombres);
